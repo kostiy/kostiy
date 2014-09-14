@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class program {
+	public static int binar(int arr[],int nam){
+		int right=arr.length;
+		int left=0;
+		int op;
+while(left<=right){
+op=(right+left)/2;	 
+  if(nam<arr[op])right=op-1;
+  else if (nam>arr[op])left=op+1;
+  else return op;
+	
+}
+return  -1;
+	}
+	
+ 
+	public static void main(String[] args) {
+int arr[],in,l,nam;
+Scanner cin = new Scanner (System.in);
+System.out.print("Введіт  розмір масиву: ");
+l=cin.nextInt();
+arr=new int[l];
+System.out.println("Вихідний массив: ");
+for(int i=0;i<l;i++){
+arr[i]=(int) (Math.random()*l);
+System.out.print(arr[i]);	
+}
+ System.out.println();
+Arrays.sort(arr);
+System.out.println("Массив відсортований ");
+for(int i:arr){System.out.print(i);}
+System.out.println("");
+System.out.println("Ведід число яке потрібно знайти:  ");
+nam=cin.nextInt();
+if(binar(arr,nam)==-1)System.out.println("вибачти та такого числа немає у масивові");else {
+System.out.println("число: "+nam+" під індексом: "+(binar(arr,nam)+1));}
+	  
+	}
+ 
+}
