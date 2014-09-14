@@ -19,23 +19,23 @@ return  -1;
 	public static void main(String[] args) {
 int arr[],in,l,nam;
 Scanner cin = new Scanner (System.in);
-System.out.print("Введіт  розмір масиву: ");
+System.out.print("rozm mas: ");
 l=cin.nextInt();
 arr=new int[l];
-System.out.println("Вихідний массив: ");
+System.out.println("vyx mas: ");
 for(int i=0;i<l;i++){
 arr[i]=(int) (Math.random()*l);
 System.out.print(arr[i]);	
 }
  System.out.println();
 Arrays.sort(arr);
-System.out.println("Массив відсортований ");
+System.out.println("vidsort mas ");
 for(int i:arr){System.out.print(i);}
 System.out.println("");
-System.out.println("Ведід число яке потрібно знайти:  ");
+System.out.println("chislo znahodzenna:  ");
 nam=cin.nextInt();
-if(binar(arr,nam)==-1)System.out.println("вибачти та такого числа немає у масивові");else {
-System.out.println("число: "+nam+" під індексом: "+(binar(arr,nam)+1));}
+if(binar(arr,nam)==-1)System.out.println("net chisla");else {
+System.out.println("chislo: "+nam+" index: "+(binar(arr,nam)+1));}
 	  
 	}
  
